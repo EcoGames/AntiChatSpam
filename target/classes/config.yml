@@ -1,0 +1,20 @@
+# Whether or not the plugin is enabled
+enabled: true
+
+# Cooldown related -------
+chat_cooldown: true
+# in seconds
+cooldown_time: 5
+
+# Filtering related -------
+detect_similarities: true
+
+# If this is set to 'false' when the word 'dirt' is said, it will just block the message from being sent and
+# give the sender a message defined in `badwords_message`.
+replace_words: true
+
+badwords:
+  - dirt: cobble
+
+# If 'replace_words' is set to false, this message will be sent instead
+badwords_message: "No bad words!"

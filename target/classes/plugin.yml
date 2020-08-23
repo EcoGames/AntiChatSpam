@@ -1,0 +1,43 @@
+name: ChatMod
+main: com.gmail.bschoe322.chatmod.ChatMod
+author: Reprevise
+version: 6.0.0
+description: The ultimate chat moderation plugin.
+api-version: 1.16
+
+commands:
+  chatmod:
+    description: Main command for ChatMod and summons help menu!
+    aliases: [cm]
+
+permissions:
+  chatmod.*:
+    description: Allows you to use all chatspam commands!
+    children:
+      chatmod.word.*: true
+      chatmod.plugin: true
+      chatmod.reload: true
+      chatmod.changemessage: true
+      chatmod.help: true
+      chatmod.bypass: true
+  chatmod.word.*:
+    description: List and manage words.
+    children:
+      chatspam.words.manage: true
+      chatspam.words.list: true
+  chatmod.word.manage:
+    description: Ability to add and delete bad words.
+  chatmod.word.list:
+    description: View bad and replacement words.
+  chatmod.plugin:
+    description: Enable/disable the plugin.
+  chatmod.reload:
+    description: Reloads the plugin config.
+  chatmod.togglereplacements:
+    description: Enables user to toggle the plugin using replacements.
+  chatmod.changemessage:
+    description: Change the sender message.
+  chatmod.help:
+    description: Access the help menu.
+  chatmod.bypass:
+    description: Bypass the chat cooldown & the filter.

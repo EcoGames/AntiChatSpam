@@ -1,0 +1,12 @@
+com\gmail\bschoe322\chatmod\commands\CommandManager.class
+com\gmail\bschoe322\chatmod\ChatCooldown$1.class
+com\gmail\bschoe322\chatmod\ConfigManager.class
+com\gmail\bschoe322\chatmod\commands\subcommands\WordCommand.class
+com\gmail\bschoe322\chatmod\ChatMod.class
+com\gmail\bschoe322\chatmod\commands\SubCommand.class
+com\gmail\bschoe322\chatmod\commands\subcommands\ToggleReplacementsCommand.class
+com\gmail\bschoe322\chatmod\MessagesUtil.class
+com\gmail\bschoe322\chatmod\commands\subcommands\ChangeMessageCommand.class
+com\gmail\bschoe322\chatmod\commands\subcommands\ToggleCommand.class
+com\gmail\bschoe322\chatmod\commands\subcommands\ReloadCommand.class
+com\gmail\bschoe322\chatmod\ChatCooldown.class
