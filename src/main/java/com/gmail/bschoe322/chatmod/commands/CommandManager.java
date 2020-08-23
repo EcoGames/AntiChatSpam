@@ -20,48 +20,46 @@ public class CommandManager implements CommandExecutor {
     subCommands.add(new ToggleCommand());
     subCommands.add(new ToggleReplacementsCommand());
     subCommands.add(new ChangeMessageCommand());
+    subCommands.add(new ChangeCooldownCommand());
+    subCommands.add(new ToggleChatCooldownCommand());
   }
 
   @Override
   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-    if (sender instanceof Player) {
-      Player p = (Player) sender;
-
-      if (args.length > 0) {
-        for (SubCommand subCommand : getSubCommands()) {
-          if (args[0].equalsIgnoreCase(subCommand.getName())) {
-            final String permission = subCommand.getPermission();
-            if (permission != null) {
-              if (!p.hasPermission(permission)) {
-                p.sendMessage(
-                    MessagesUtil.ERROR
-                        + "You don't have permission '"
-                        + ChatColor.BOLD
-                        + permission
-                        + ChatColor.RED
-                        + "'!");
-                return true;
-              }
+    if (args.length > 0) {
+      for (SubCommand subCommand : getSubCommands()) {
+        if (args[0].equalsIgnoreCase(subCommand.getName())) {
+          final String permission = subCommand.getPermission();
+          if (permission != null) {
+            if (!sender.hasPermission(permission)) {
+              sender.sendMessage(
+                  MessagesUtil.ERROR
+                      + "You don't have permission '"
+                      + ChatColor.BOLD
+                      + permission
+                      + ChatColor.RED
+                      + "'!");
+              return true;
             }
-            subCommand.perform(p, args);
-            return true;
           }
+          subCommand.perform(sender, args);
+          return true;
         }
       }
-      p.sendMessage(ChatColor.GOLD + "---- AntiChatSpam Help ----");
-
-      for (SubCommand subCommand : getSubCommands()) {
-        p.sendMessage(
-            ChatColor.GOLD
-                + ChatColor.BOLD.toString()
-                + subCommand.getSyntax()
-                + ChatColor.GOLD
-                + " - "
-                + subCommand.getDescription());
-      }
-
-      p.sendMessage(ChatColor.GOLD + "------------------------");
     }
+    sender.sendMessage(ChatColor.GOLD + "---- AntiChatSpam Help ----");
+
+    for (SubCommand subCommand : getSubCommands()) {
+      sender.sendMessage(
+          ChatColor.GOLD
+              + ChatColor.BOLD.toString()
+              + subCommand.getSyntax()
+              + ChatColor.GOLD
+              + " - "
+              + subCommand.getDescription());
+    }
+
+    sender.sendMessage(ChatColor.GOLD + "------------------------");
 
     return true;
   }

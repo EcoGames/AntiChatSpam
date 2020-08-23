@@ -10,9 +10,11 @@ import java.util.UUID;
 
 public class ChatCooldown implements Listener {
   ChatMod plugin;
+  ConfigManager configManager;
 
   public ChatCooldown(ChatMod plugin) {
     this.plugin = plugin;
+    this.configManager = ConfigManager.getInstance();
   }
 
   @EventHandler
@@ -24,15 +26,15 @@ public class ChatCooldown implements Listener {
       e.getPlayer()
           .sendMessage(
               MessagesUtil.PREFIX
-                  + "You are in the chat cooldown, you must wait for "
+                  + "Please wait"
                   + plugin.cooldownTime.get(uniqueId)
-                  + " seconds!");
+                  + " seconds before sending a message!");
       e.setCancelled(true);
       return;
     }
 
-    if (!plr.hasPermission("chatspam.bypass")) {
-      plugin.cooldownTime.put(uniqueId, plugin.getConfig().getInt("cooldown_time"));
+    if (!plr.hasPermission("chatspam.bypass") && configManager.isChatCooldownEnabled()) {
+      plugin.cooldownTime.put(uniqueId, configManager.getCooldownTime());
       plugin.cooldownTask.put(
           uniqueId,
           new BukkitRunnable() {

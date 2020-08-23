@@ -22,9 +22,9 @@ public class ChatMod extends JavaPlugin implements Listener {
   ConfigManager configManager;
 
   public void onEnable() {
+    configManager = ConfigManager.init(this);
     register();
     Objects.requireNonNull(getCommand("chatmod")).setExecutor(new CommandManager(this));
-    configManager = ConfigManager.init(this);
     getConfig().options().copyDefaults(true);
     saveDefaultConfig();
     reloadConfig();

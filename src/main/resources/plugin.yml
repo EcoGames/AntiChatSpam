@@ -23,8 +23,8 @@ permissions:
   chatmod.word.*:
     description: List and manage words.
     children:
-      chatspam.words.manage: true
-      chatspam.words.list: true
+      chatspam.word.manage: true
+      chatspam.word.list: true
   chatmod.word.manage:
     description: Ability to add and delete bad words.
   chatmod.word.list:
@@ -41,3 +41,7 @@ permissions:
     description: Access the help menu.
   chatmod.bypass:
     description: Bypass the chat cooldown & the filter.
+  chatmod.changecooldown:
+    description: Change the cooldown timer
+  chatmod.togglechatcooldown:
+    description: Toggle the chat cooldown functionality

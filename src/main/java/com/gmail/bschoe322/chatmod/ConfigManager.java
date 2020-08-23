@@ -63,8 +63,33 @@ public class ConfigManager {
   }
 
   public void changeMessage(String newMessage) {
-    plugin.getConfig().set("badwords_message", newMessage);
+    config.set("badwords_message", newMessage);
     saveConfig();
+  }
+
+  public void changeCooldownTime(int cooldownTime) {
+    config.set("cooldown_time", cooldownTime);
+    saveConfig();
+  }
+
+  public int getCooldownTime() {
+    return config.getInt("cooldown_time");
+  }
+
+  public boolean toggleChatCooldown() {
+    if (isChatCooldownEnabled()) {
+      config.set("chat_cooldown", false);
+      saveConfig();
+      return false;
+    } else {
+      config.set("chat_cooldown", true);
+      saveConfig();
+      return true;
+    }
+  }
+
+  public boolean isChatCooldownEnabled() {
+    return config.getBoolean("chat_cooldown");
   }
 
   public boolean togglePlugin() {
