@@ -1,7 +1,7 @@
 name: ChatMod
 main: com.gmail.bschoe322.chatmod.ChatMod
 author: Reprevise
-version: 6.0.0
+version: 7.0.0
 description: The ultimate chat moderation plugin.
 api-version: 1.16
 
@@ -20,6 +20,9 @@ permissions:
       chatmod.changemessage: true
       chatmod.help: true
       chatmod.bypass: true
+      chatmod.togglereplacements: true
+      chatmod.changecooldown: true
+      chatmod.togglechatcooldown: true
   chatmod.word.*:
     description: List and manage words.
     children:

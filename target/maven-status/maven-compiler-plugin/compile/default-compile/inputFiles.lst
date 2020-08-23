@@ -1,11 +1,13 @@
 C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\SubCommand.java
+C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\ToggleChatCooldownCommand.java
 C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\ConfigManager.java
 C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\ChatMod.java
-C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\MessagesUtil.java
-C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\WordCommand.java
-C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\ToggleReplacementsCommand.java
 C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\ChangeMessageCommand.java
-C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\ToggleCommand.java
 C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\CommandManager.java
 C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\ChatCooldown.java
+C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\MessagesUtil.java
+C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\ChangeCooldownCommand.java
+C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\WordCommand.java
+C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\ToggleReplacementsCommand.java
+C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\ToggleCommand.java
 C:\dev\minecraft\spigot_plugins\ChatMod\src\main\java\com\gmail\bschoe322\chatmod\commands\subcommands\ReloadCommand.java
